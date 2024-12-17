@@ -9,8 +9,6 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectOption,
-  SelectOptions,
   SelectTrigger,
 } from '@/components/ui/select';
 import { Icon } from 'lucide-react';
@@ -32,21 +30,7 @@ const info = [
     title: 'Address',
     description: 'Block-D, Road-08, Bashundhara R/A, Dhaka, Bangladesh',
   },
-  {
-    icon: <FaPhoneAlt />,
-    title: 'Phone',
-    description: '(+880) 1639024898',
-  },
-  {
-    icon: <FaPhoneAlt />,
-    title: 'Phone',
-    description: '(+880) 1639024898',
-  },
-  {
-    icon: <FaPhoneAlt />,
-    title: 'Phone',
-    description: '(+880) 1639024898',
-  },
+  
 ];
 
 import { motion } from 'framer-motion';
@@ -102,7 +86,7 @@ const Contact = () => {
           </div>
           {/* info */}
           <div className='flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0'>
-            <ul>
+            <ul className='flex flex-col gap-10'>
               {info.map((item, index) => {
                 return (
                   <li key={index} className='flex items-center gap-6'>
